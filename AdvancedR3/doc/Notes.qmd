@@ -1,0 +1,17 @@
+---
+title: "learning.qmd"
+format: html
+editor: visual
+---
+
+## Learning outcome
+
+Describe whan an OPEN, COLLABORATOR-FRIENDLY, and NEARLY-AUTOMATED REPRODUCIBLE DATA ANALYSIS PIPELINE AND WORKFLOW looks like, and create a project that follows these concepts by using R.
+
+-   Statistical analysis
+
+-   Streamline collaboration
+
+-   Steps of a pipeline that goes from raw data to final results
+
+-   

@@ -1,0 +1,43 @@
+---
+title: "Tips AdvancedR3"
+format: html
+editor: visual
+---
+
+## Some commands to set up the project
+
+```{r}
+# Add Git to the project
+prodigenr::setup_with_git()
+# Create a `functions.R` file in the `R/` folder
+usethis::use_r("functions", open = FALSE)
+# Ignore this file that gets created by some usethis functions
+usethis::use_git_ignore(".Rbuildignore")
+# Set some project options to start fresh each time
+usethis::use_blank_slate("project")
+```
+
+## Tell Git to ignore some files
+
+We are using Git to track changes made to files in our project. The original metabolomics dataset is stored on Zenodo, so we don’t actually need to keep the raw data files in our Git history. So let’s tell Git to ignore the files created in the `data-raw/nmr-omics/` folder. In the Console, type out the code below. You only need to do this once.
+
+```{r}
+usethis::use_git_ignore("data-raw/nmr-omics/")
+```
+
+## Set up repository 
+
+```{r}
+git remote -v
+git remote set-url origin https://github.com/melinaguillon/AdvancedR3.git
+# or
+git remote add origin https://github.com/melinaguillon/AdvancedR3.git
+git branch -M main
+git push -u origin main
+```
+
+## Create a Quarto file
+
+```{r}
+r3::create_qmd_doc()
+```
